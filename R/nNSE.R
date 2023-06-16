@@ -9,4 +9,5 @@
 #' nNSE(0.875)
 nNSE <- function(NSE){
   nnse <- 1 / (2 - NSE)
+  return(nnse)
 }
