@@ -13,9 +13,6 @@ peakDet(v, delta, x = NULL)
 
 \item{x}{a numeric vector the same length as v containing corresponding x-values for v.}
 }
-\value{
-
-}
 \description{
 A peak detection algorithm for R; finds local maxima and minima.
 Based on an algorithm for MATLAB by Eli Billauer (http://www.billauer.co.il/peakdet.html).

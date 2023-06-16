@@ -13,9 +13,6 @@ MAEP(x, y, na.rm = FALSE)
 
 \item{na.rm}{NA remove defaulted as FALSE}
 }
-\value{
-
-}
 \description{
 Calculate MAEP model diagnostic from an observed series,
 x, and modelled series, y.
