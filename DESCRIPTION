@@ -1,11 +1,15 @@
 Package: objectivER
-Title: What the Package Does (One Line, Title Case)
-Version: 1.0.0
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Title: Providing a loaction for all your model performance tools
+Version: 0.1.0
+Authors@R: c(
+    person("Jonathan", "Payne", , "jon.payne@environment-agency.gov.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-2551-5353")),
+    person("Oliver", "Dyer", , "oliver.dyer@environment-agency.gov.uk", role = c("aut"),
+           comment = c(ORCID = "0000-0003-2773-6731"))
+           )
+Description: The objectivER package provides a series of forecast model performance tools.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+URL: https://jonpayneea.github.io/objectivER/, https://github.com/JonPayneEA/objectivER

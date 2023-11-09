@@ -11,6 +11,9 @@ findPeaks(x, m = 3)
 
 \item{m}{Window of which to identify peaks}
 }
+\value{
+A series of peak positions
+}
 \description{
 Find peaks with base R
 }

@@ -12,7 +12,7 @@
 #' @param measure Determines the objective
 #' @param calcRays Option to calculate the rays for plotting. Set as TRUE.
 #'
-#' @return
+#' @return Model performance data
 #' @export
 #'
 #' @examples

@@ -2,7 +2,7 @@
 #'
 #' @param NSE NSE value
 #'
-#' @return
+#' @return A normalise Nash Sutcliffe Efficiency
 #' @export
 #'
 #' @examples

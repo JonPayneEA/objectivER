@@ -11,7 +11,7 @@
 #' minima. Data frames contain two columns with indices in v (or corresponding
 #' values in x if provided) and values in v.
 #'
-#' @return
+#' @return Peak detected points
 #' @export
 #'
 #' @examples

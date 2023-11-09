@@ -8,10 +8,12 @@
 #' @param y Estimated/modelled values
 #' @param na.rm NA remove defaulted as FALSE
 #'
-#' @return
+#' @return The Pearson correlation value
 #' @export
 #'
 #' @examples
+#' x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+#' y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 #' R2(x, y)
 R2 <- function(x, y, na.rm=FALSE) {
   if (na.rm==TRUE) {
@@ -38,10 +40,12 @@ R2 <- function(x, y, na.rm=FALSE) {
 #' @param y Estimated/modelled values
 #' @param na.rm NA remove defaulted as FALSE
 #'
-#' @return
+#' @return The Root Mean Square Error value
 #' @export
 #'
 #' @examples
+#' x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+#' y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 #' RMSE(x, y)
 RMSE <- function(x, y, na.rm=FALSE) {
   if (na.rm==TRUE) {
@@ -67,10 +71,12 @@ RMSE <- function(x, y, na.rm=FALSE) {
 #' @param y Estimated/modelled values
 #' @param na.rm NA remove defaulted as FALSE
 #'
-#' @return
+#' @return The Mean Absolute Error value
 #' @export
 #'
 #' @examples
+#' x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+#' y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 #' MAE(x, y)
 MAE <- function(x, y, na.rm=FALSE) {
   if (na.rm==TRUE) {
@@ -96,10 +102,12 @@ MAE <- function(x, y, na.rm=FALSE) {
 #' @param y Estimated/modelled values
 #' @param na.rm NA remove defaulted as FALSE
 #'
-#' @return
+#' @return  Root Mean Square Error Percentage value
 #' @export
 #'
 #' @examples
+#' x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+#' y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 #' RMSEP(x, y)
 RMSEP <- function(x, y, na.rm=FALSE) {
   if (na.rm==TRUE) {
@@ -125,10 +133,12 @@ RMSEP <- function(x, y, na.rm=FALSE) {
 #' @param y Estimated/modelled values
 #' @param na.rm NA remove defaulted as FALSE
 #'
-#' @return
+#' @return Mean Absolute Error Percentage value
 #' @export
 #'
 #' @examples
+#' x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+#' y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 #' MAEP(x, y)
 MAEP <- function(x, y, na.rm=FALSE) {
   if (na.rm==TRUE) {

@@ -8,7 +8,7 @@
 #' @param x Data set
 #' @param m Window of which to identify peaks
 #'
-#' @return
+#' @return A series of peak positions
 #' @export
 #'
 #' @examples

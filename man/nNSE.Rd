@@ -9,6 +9,9 @@ nNSE(NSE)
 \arguments{
 \item{NSE}{NSE value}
 }
+\value{
+A normalise Nash Sutcliffe Efficiency
+}
 \description{
 Normalised NSE
 }

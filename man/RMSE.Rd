@@ -13,10 +13,15 @@ RMSE(x, y, na.rm = FALSE)
 
 \item{na.rm}{NA remove defaulted as FALSE}
 }
+\value{
+The Root Mean Square Error value
+}
 \description{
 Calculate RMSE model diagnostic from an observed series,
 x, and modelled series, y.
 }
 \examples{
+x <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+y <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
 RMSE(x, y)
 }

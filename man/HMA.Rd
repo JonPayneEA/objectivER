@@ -29,6 +29,9 @@ HMA(
 
 \item{calcRays}{Option to calculate the rays for plotting. Set as TRUE.}
 }
+\value{
+Model performance data
+}
 \description{
 Created from the John Ewen 2011 paper; "Hydrograph matching method for measuring model performance".
 
