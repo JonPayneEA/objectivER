@@ -25,6 +25,8 @@ minima. Data frames contain two columns with indices in v (or corresponding
 values in x if provided) and values in v.
 }
 \examples{
+
+# Simulated data
 x <- seq(0, 20, .05)
 vals <- sin(x)
 det <- peakDet(vals, .5, x)
@@ -34,4 +36,23 @@ points(det$maxtab$val~det$maxtab$pos, bg = 'red', pch = 21, col = 'black',
 lwd = 0.9, cex = 1.5);
 points(det$mintab$val~det$mintab$pos, bg = 'blue', pch = 21, col = 'black',
 lwd = 0.9, cex = 1.5)
+
+## Observed hydrometric
+library(riskyData)
+data(bewdley)
+bewdley$window(start = '2020-10-01 00:00', export ='snip')
+
+det <- peakDet(bewdley$data$value, 40, seq_along(bewdley$data$value))
+
+plot(x = seq_along(bewdley$data$value),
+     y = bewdley$data$value,
+     xlab = 'Time',
+     ylab = 'Stage',
+     type = 'l');
+points(det$maxtab$val~det$maxtab$pos,
+       bg = 'red', pch = 21, col = 'black',
+       lwd = 0.9, cex = 1.5);
+points(det$mintab$val~det$mintab$pos,
+       bg = 'blue', pch = 21, col = 'black',
+       lwd = 0.9, cex = 1.5)
 }

@@ -1,15 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# objectivER
+# objectivER <img src="logo.png" align="right" width="120" />
 
 <!-- badges: start -->
 
 [![](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![](https://img.shields.io/github/last-commit/JonPayneEA/HydroEnR.svg)](https://github.com/JonPayneEA/HydroEnR/commits/main)
 [![License: GNU General Public
 License](https://img.shields.io/badge/license-GNU%20General%20Public%20License-blue.svg)](https://cran.r-project.org/web/licenses/GNU%20General%20Public%20License)
-[![](https://img.shields.io/github/languages/code-size/JonPayneEA/HydroEnR.svg)](https://github.com/JonPayneEA/HydroEnR)
+[![](https://img.shields.io/github/last-commit/JonPayneEA/objectivER.svg)](https://github.com/JonPayneEA/objectivER/commits/master)
+[![](https://img.shields.io/github/languages/code-size/JonPayneEA/objectivER.svg)](https://github.com/JonPayneEA/objectivER)
 <!-- badges: end -->
 
 The goal of objectivER is to …
@@ -24,35 +24,25 @@ You can install the development version of objectivER from
 devtools::install_github("JonPayne88/objectivER")
 ```
 
-## Example
+## Example - Hydrograph matching algorithm
 
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(objectivER)
-## basic example code
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+qo <- c(3, 3, 4, 20, 62, 85, 33, 20, 5)
+qs <- c(5, 12, 65, 43, 34, 28, 13, 12, 22)
+a <- HMA(obs = qo, sim = qs, b = 4, maxLag = 1, maxLead = 3, measure = 'nse')
+plot(qo, type = 'l', col = 'blue', lwd = 2,
+     xlab = 'Timestep',
+          ylab = 'Flow')
+          lines(qs, col = 'orange', lwd = 2)
+          for (i in seq_along(a$Rays)){
+            segments(a$Rays[[i]]$obs[1], a$Rays[[i]]$obs[2], a$Rays[[i]]$sim[1], a$Rays[[i]]$sim[2], lty = 2)
+            }
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-HMA-1.png" width="100%" />

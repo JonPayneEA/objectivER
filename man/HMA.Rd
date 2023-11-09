@@ -49,5 +49,4 @@ plot(qo, type = 'l', col = 'blue', lwd = 2,
           for (i in seq_along(a$Rays)){
             segments(a$Rays[[i]]$obs[1], a$Rays[[i]]$obs[2], a$Rays[[i]]$sim[1], a$Rays[[i]]$sim[2], lty = 2)
             }
-
 }

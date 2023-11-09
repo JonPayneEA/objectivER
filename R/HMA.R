@@ -27,7 +27,6 @@
 #'           for (i in seq_along(a$Rays)){
 #'             segments(a$Rays[[i]]$obs[1], a$Rays[[i]]$obs[2], a$Rays[[i]]$sim[1], a$Rays[[i]]$sim[2], lty = 2)
 #'             }
-#'
 HMA <- function(obs = NULL, sim = NULL, b = 4, maxLag = 3, maxLead = 3, measure = 'nse', calcRays = TRUE){
 
   if (!is.numeric(obs) || !is.numeric(sim)) {
